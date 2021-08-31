@@ -1,3 +1,29 @@
+Number and name of feature:Show Model
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 1
+
+Finish time:9
+
+Actual time needed to complete: 7 hours
+_____
+Number and name of feature:display image and allow user to vote for fav beast when click on image
+
+Estimate of time needed to complete: 4 hours
+
+Start time: 2
+
+Finish time: 6
+
+Actual time needed to complete: 3 hours
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

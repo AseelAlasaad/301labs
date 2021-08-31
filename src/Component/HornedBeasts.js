@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-
+import Col from 'react-bootstrap/Col';
 class HornedBeasts extends React.Component{
     constructor(props)
     {
@@ -10,15 +10,22 @@ class HornedBeasts extends React.Component{
         this.state= {
 
             vots:0
+            
         }
 
     }
 
        voteFavoritebeast = () =>{
             this.setState({
-                vots : this.state.vots +1
-            })
+                vots : this.state.vots +1,
+                
+            });
+            
        } 
+       display=()=>{
+        this.props.displayCard(this.props.title);
+       }
+       
     
     render()
     {
@@ -27,8 +34,8 @@ class HornedBeasts extends React.Component{
                  {/* <h2>{this.props.title}</h2>
                  <img src={this.props.imageUrl} alt=""></img>
                  <p>{this.props.description}</p> */}
-
-                <Card style={{ width: '18rem' }}>
+                <Col>
+                <Card style={{ width: '18rem' }} onClick={this.display}>
                 <Card.Img variant="top" src={this.props.imageUrl} onClick={this.voteFavoritebeast}/>
                 <Card.Body>
                     <Card.Title>{this.props.title}</Card.Title>
@@ -42,7 +49,7 @@ class HornedBeasts extends React.Component{
                     <Button variant="primary">Go somewhere</Button>
                 </Card.Body>
                 </Card>
-
+                </Col>
             </>
         )
     }
