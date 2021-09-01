@@ -15,14 +15,14 @@ class App extends React.Component{
 
           data:Data,
           showModal: false,
-          selectBeast:{}
+          // selectBeast:{}
         
           
   }}
 
  
   displayBeast=(title)=>{
-     let Beast=Data.filter((item)=>{
+     const Beast=Data.filter((item)=>{
       
       
         return item.title===title;
@@ -31,7 +31,7 @@ class App extends React.Component{
     })
     this.setState({
       showModal:true,
-      selectBeast:Beast
+      data:Beast[0]
    
      
     })
@@ -52,13 +52,13 @@ class App extends React.Component{
     return(
       <>
       <Header />
-      <Main beastData={this.state.data}   displayCard={this.props.displayBeast
+      <Main beastData={this.state.data}   displayBeast={this.props.displayBeast
                         } />
       <Footer />
-      <SelectedBeast close={this.close}
-      selectBeast={this.state.selectBeast}
+      <SelectedBeast 
+      selectBeast={this.state.data}
       show={this.state.showModal}
-     
+      close={this.close}
       />
       
     </>

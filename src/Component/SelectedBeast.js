@@ -21,6 +21,9 @@ class SelectedBeast extends React.Component {
                 <Modal show={this.props.show} onHide={this.props.close}>
                     <Modal.Header closeButton>
                         <Modal.Title>{this.props.selectBeast.title}</Modal.Title>
+                        <Button className="close" onClick={this.props.close}>
+             
+             </Button>
                     </Modal.Header>
 
                     <Modal.Body>   <Col>
