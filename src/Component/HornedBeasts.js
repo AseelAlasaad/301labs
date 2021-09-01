@@ -18,13 +18,12 @@ class HornedBeasts extends React.Component{
        voteFavoritebeast = () =>{
             this.setState({
                 vots : this.state.vots +1,
+
                 
             });
-            
+            this.props.displayBeast();
+            this.props.updateInfomodel(this.props.title,this.props.imageurl,this.props.description);
        } 
-       displayBeast=()=>{
-        this.props.displayBeast(this.props.title);
-       }
        
     
     render()
@@ -35,8 +34,8 @@ class HornedBeasts extends React.Component{
                  <img src={this.props.imageUrl} alt=""></img>
                  <p>{this.props.description}</p> */}
                 <Col>
-                <Card style={{ width: '18rem' }} onClick={this.displayBeast}>
-                <Card.Img variant="top" src={this.props.imageUrl} onClick={this.voteFavoritebeast}/>
+                <Card style={{ width: '18rem' }} onClick={this.voteFavoritebeast}>
+                <Card.Img variant="top" src={this.props.imageurl} />
                 <Card.Body>
                     <Card.Title>{this.props.title}</Card.Title>
                     <Card.Text>
