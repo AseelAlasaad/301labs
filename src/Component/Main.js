@@ -4,9 +4,7 @@ import Row from 'react-bootstrap/Row';
 import HornedBeasts from './HornedBeasts';
 
 class Main extends React.Component{
-//  constructor(props){
-//      super(props);
-//  }
+
     render()
     {
         return (
@@ -19,10 +17,10 @@ class Main extends React.Component{
                         return (<HornedBeasts
                         title={item.title}
 
-                        imageUrl={item.image_url}
-
+                        imageurl={item.image_url}
                         description={item.description}
                         displayBeast={this.props.displayBeast}
+                        updateInfomodel={this.props.updateInfomodel}
                        
                         
                         

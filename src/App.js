@@ -7,7 +7,7 @@ import SelectedBeast from "./Component/SelectedBeast";
 
 
 class App extends React.Component{
-  //display, open  , close 
+  //display, update  , close 
   constructor(props)
   {
      super(props)
@@ -15,34 +15,31 @@ class App extends React.Component{
 
           data:Data,
           showModal: false,
-          // selectBeast:{}
+          title:'',
+          imageurl:'',
+          describtion:''
         
           
   }}
 
  
-  displayBeast=(title)=>{
-     const Beast=Data.filter((item)=>{
-      
-      
-        return item.title===title;
-     
-      
+  displayBeast=()=>{
+    this.setState({ 
+      showModal: true
     })
-    this.setState({
-      showModal:true,
-      data:Beast[0]
-   
-     
-    })
-    //console.log(this.state.selectBeast);
   }
   close=()=>{
     this.setState({ 
-      showModal: this.state.false
+      showModal:false
     })
   }
- 
+ updateInfomodel=(title,imageurl,describtion)=>{
+   this.setState({
+     title:title,
+     imageurl:imageurl,
+     describtion:describtion
+   })
+ }
 
 
   
@@ -52,13 +49,16 @@ class App extends React.Component{
     return(
       <>
       <Header />
-      <Main beastData={this.state.data}   displayBeast={this.props.displayBeast
-                        } />
+      <Main beastData={Data}  
+       displayBeast={this.displayBeast} 
+       updateInfomodel={this.updateInfomodel}/>
       <Footer />
       <SelectedBeast 
-      selectBeast={this.state.data}
       show={this.state.showModal}
       close={this.close}
+      title={this.state.title}
+      imageurl={this.state.imageurl}
+      describtion={this.state.describtion}
       />
       
     </>
