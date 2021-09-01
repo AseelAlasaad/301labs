@@ -1,3 +1,13 @@
+Number and name of feature: Filter by Numbers of Horns
+
+Estimate of time needed to complete: 1 hours
+
+Start time: 1:30
+
+Finish time: 3:30
+
+Actual time needed to complete: 2 hours
+_____
 Number and name of feature:Show Model
 
 Estimate of time needed to complete: 2 hours
