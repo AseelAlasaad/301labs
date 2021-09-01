@@ -22,6 +22,7 @@ class Main extends React.Component{
                         imageUrl={item.image_url}
 
                         description={item.description}
+                        displayBeast={this.props.displayBeast}
                        
                         
                         

@@ -22,8 +22,8 @@ class HornedBeasts extends React.Component{
             });
             
        } 
-       display=()=>{
-        this.props.displayCard(this.props.title);
+       displayBeast=()=>{
+        this.props.displayBeast(this.props.title);
        }
        
     
@@ -35,7 +35,7 @@ class HornedBeasts extends React.Component{
                  <img src={this.props.imageUrl} alt=""></img>
                  <p>{this.props.description}</p> */}
                 <Col>
-                <Card style={{ width: '18rem' }} onClick={this.display}>
+                <Card style={{ width: '18rem' }} onClick={this.displayBeast}>
                 <Card.Img variant="top" src={this.props.imageUrl} onClick={this.voteFavoritebeast}/>
                 <Card.Body>
                     <Card.Title>{this.props.title}</Card.Title>
